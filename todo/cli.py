@@ -3,11 +3,13 @@
 import argparse
 import sys
 
+from . import __version__
 from .store import DEFAULT_PATH, TaskStore
 
 
 def build_parser():
     parser = argparse.ArgumentParser(prog="todo", description="Manage a simple to-do list.")
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument("--file", default=DEFAULT_PATH, help="path to the task file")
     sub = parser.add_subparsers(dest="command", required=True)
 

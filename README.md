@@ -14,6 +14,8 @@ python -m todo remove 1
 
 Use `--file path/to/tasks.json` to work with a different task file.
 
+Run `python -m todo --version` to print the installed version.
+
 ## Tests
 
 ```bash
